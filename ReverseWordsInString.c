@@ -2,13 +2,22 @@
 #include <stdio.h>
 #include <stdint.h>
 #include <string.h>
+#include <stdlib.h>
 
 void ReverseSentance(uint8_t *input, uint8_t *output);
 int main() {
-    uint8_t a[]= "one two three four", b[20] = {0};
+    uint8_t a[]= "one two three four", *b = NULL;
 
-    ReverseSentance(&a[0], &b[0]);
-    printf("%s",b);
+    b = (uint8_t*)malloc(strlen(a)+1);
+    if(b==NULL) 
+    {
+         printf(" Memory not allocated internally");
+        return 0;
+    }
+    ReverseSentance(&a[0], b);
+    printf("input: %s",a);
+    printf("\noutput: %s",b);
+    free(b);
 
     return 0;
 }
