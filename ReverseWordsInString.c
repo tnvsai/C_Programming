@@ -4,8 +4,10 @@
 #include <string.h>
 #include <stdlib.h>
 
+
 void ReverseSentance(uint8_t *input, uint8_t *output);
-int main() {
+int main()
+ {
     uint8_t a[]= "one two three four", *b = NULL;
 
     b = (uint8_t*)malloc(strlen(a)+1);
@@ -58,3 +60,7 @@ void ReverseSentance(uint8_t *input, uint8_t *output)
     }
     output[j] = '\0';
 }
+
+
+
+
