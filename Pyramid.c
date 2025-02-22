@@ -6,7 +6,7 @@
 void PrintPyramid(int32_t num);
 
 int main() {
-    int32_t size;
+    int32_t size = 0;
     printf("enter size of pyramid");
     scanf("%d", &size);
   PrintPyramid(size);
@@ -17,6 +17,7 @@ int main() {
 void PrintPyramid(int32_t num)
 {
     int32_t temp=0,space=0,star=1,reset=1;
+    while (num>0)    
     {
         space=num-1;
         while(space>=0)
